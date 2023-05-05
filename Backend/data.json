@@ -1,0 +1,25 @@
+[
+
+    {
+        "id": 1,
+        "productName": "Mobile",
+        "color": "black",
+        "category": "Gadgets",
+        "price": 10000
+    },
+    
+    {
+        "id": 2,
+        "productName": "Jeans",
+        "color": "red",
+        "category": "Men's Wear",
+        "price": 2000
+    },
+    {
+        "id": 3,
+        "productName": "Bra",
+        "color": "white",
+        "category": "Undergarments",
+        "price": 1500
+    }
+    ]

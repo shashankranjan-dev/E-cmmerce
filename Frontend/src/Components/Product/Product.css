@@ -1,0 +1,61 @@
+.ads {
+    background: rgba(252, 114, 104, 0.06);
+    background: url("../../../public/assets/images/counter.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 420px;
+}
+
+.ads .ads-content h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.ads .ads-content p {
+    margin-bottom: 30px;
+}
+
+.ads .ads-content span.deal {
+    background: rgba(255, 255, 255, 0.633);
+    padding: 10px;
+    color: #222;
+}
+
+.ads .btn-main {
+    background: orangered;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+.ads .btn-main:hover {
+    background: #fff;
+    border-color: #fff;
+}
+
+.ads .syotimer.large .syotimer-cell {
+    height: 100px;
+    width: 100px;
+}
+
+.ads .syotimer-cell {
+    display: inline-block;
+    height: 100px;
+    width: 115px;
+    border-radius: 3px;
+    background: red;
+    text-align: center;
+    padding-top: 15px;
+    margin-right: 10px;
+}
+
+.ads .syotimer-cell__unit {
+    color: #777;
+    background: red;
+}
+
+.ads .syotimer-cell__value {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 45px;
+}
