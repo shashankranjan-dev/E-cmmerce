@@ -82,7 +82,7 @@ function Store() {
 
   return (
     <div>
-      <div className="w-1/2 my-0 mx-auto pt-10 flex">
+      <div className="max-w-screen-2xl my-0 2xl:mx-auto pt-10 flex">
         <button
           onClick={() => changeCategory("All")}
           className={`${
@@ -136,162 +136,200 @@ function Store() {
       {isLoaded ? (
         <div></div>
       ) : (
-        <div className="mx-10 w-[95%] my-10 flex justify-between flex-wrap">
-          {products.map((product) => (
-            <div class="relative  flex flex-col items-center justify-center">
-              <div class="container">
-                <div class="my-6 w-96 relative flex  flex-col overflow-hidden bg-blue-50 rounded-lg shadow-lg border p-6">
-                  <div class="flex flex-col ">
-                    <div class="">
-                      <div class="relative h-62  w-full mb-3 aspect-square">
-                        <div class="absolute flex flex-col top-0 right-0 p-3">
-                          <button class="transition ease-in duration-300 bg-gray-800  hover:text-purple-500 shadow hover:shadow-md text-gray-500 rounded-full w-8 h-8 text-center p-1">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              class="h-6 w-6"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                        <img
-                          src={product.imageUrl}
-                          alt="Just a flower"
-                          class=" w-full     rounded-2xl"
-                        />
-                      </div>
-                      <div class="flex-auto justify-evenly">
-                        <div class="flex flex-wrap ">
-                          <div class="w-full flex-none text-sm flex items-center text-gray-600">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              class="h-4 w-4 text-red-500 mr-1"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                            <span class="text-gray-400 whitespace-nowrap mr-3">
-                              4.60
-                            </span>
-                            <span class="mr-2 text-gray-400">India</span>
-                          </div>
-                          <div class="flex items-center w-full justify-between min-w-0 ">
-                            <h2 class="text-lg mr-auto cursor-pointer text-gray-900 hover:text-purple-500 truncate ">
-                              {product.productName}
-                            </h2>
-                            <div class="flex items-center bg-green-400 text-gray-900 text-xs px-2 py-1 ml-3 rounded-lg">
-                              {product.category}
-                            </div>
-                          </div>
-                        </div>
-                        <div class="text-xl text-gray-900 font-semibold mt-1">
-                          {product.price}
-                        </div>
-                        <div class="lg:flex  py-4  text-sm text-gray-600">
-                          <div class="flex-1 inline-flex items-center  mb-3">
-                            <div class="w-full flex-none text-sm flex items-center text-gray-600">
-                              <ul class="flex flex-row justify-center items-center space-x-2">
-                                <li class="">
-                                  <span class="block p-1 border-2 border-gray-900 hover:border-blue-600 rounded-full transition ease-in duration-300">
-                                    <a
-                                      href="#blue"
-                                      class="block w-3 h-3 bg-blue-600 rounded-full"
-                                    ></a>
-                                  </span>
-                                </li>
-                                <li class="">
-                                  <span class="block p-1 border-2 border-gray-900 hover:border-yellow-400 rounded-full transition ease-in duration-300">
-                                    <a
-                                      href="#yellow"
-                                      class="block w-3 h-3  bg-yellow-400 rounded-full"
-                                    ></a>
-                                  </span>
-                                </li>
-                                <li class="">
-                                  <span class="block p-1 border-2 border-gray-900 hover:border-red-500 rounded-full transition ease-in duration-300">
-                                    <a
-                                      href="#red"
-                                      class="block w-3 h-3  bg-red-500 rounded-full"
-                                    ></a>
-                                  </span>
-                                </li>
-                                <li class="">
-                                  <span class="block p-1 border-2 border-gray-900 hover:border-green-500 rounded-full transition ease-in duration-300">
-                                    <a
-                                      href="#green"
-                                      class="block w-3 h-3  bg-green-500 rounded-full"
-                                    ></a>
-                                  </span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="flex-1 inline-flex items-center mb-3">
-                            <span class="text-secondary whitespace-nowrap mr-3">
-                              Size
-                            </span>
-                            <div class="cursor-pointer text-gray-400 ">
-                              <span class="hover:text-purple-500 p-1 py-0">
-                                S
-                              </span>
-                              <span class="hover:text-purple-500 p-1 py-0">
-                                M
-                              </span>
-                              <span class="hover:text-purple-500 p-1 py-0">
-                                L
-                              </span>
-                              <span class="hover:text-purple-500 p-1 py-0">
-                                XL
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="flex space-x-2 text-sm font-medium justify-start">
-                          <button
-                            onClick={() => handleAddtoCart(product)}
-                            class="transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-purple-500 px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-full hover:bg-purple-600 "
-                          >
-                            <span>Add Cart</span>
-                          </button>
-                          <button class="transition ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-gray-400 rounded-full w-9 h-9 text-center p-2">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              class=""
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                              />
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
+        // <div className="max-w-screen-2xl mx-auto gap-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+        //   {products.map((product) => (
+        //     <div class="relative ">
+        //       <div class="container">
+        //         <div class="my-6 w-96 relative flex  flex-col overflow-hidden bg-white rounded-lg shadow-lg border p-6">
+        //           <div class="flex flex-col ">
+        //             <div class="">
+        //               <div class="relative h-full w-full mb-3 aspect-square">
+        //                 <div class="absolute flex flex-col top-0 right-0 p-3">
+        //                   <button class="transition ease-in duration-300 bg-gray-800  hover:text-purple-500 shadow hover:shadow-md text-gray-500 rounded-full w-8 h-8 text-center p-1">
+        //                     <svg
+        //                       xmlns="http://www.w3.org/2000/svg"
+        //                       class="h-6 w-6"
+        //                       fill="none"
+        //                       viewBox="0 0 24 24"
+        //                       stroke="currentColor"
+        //                     >
+        //                       <path
+        //                         stroke-linecap="round"
+        //                         stroke-linejoin="round"
+        //                         stroke-width="2"
+        //                         d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+        //                       />
+        //                     </svg>
+        //                   </button>
+        //                 </div>
+        //                 <img
+        //                   src={product.imageUrl}
+        //                   alt="Just a flower"
+        //                   class=" w-full     rounded-2xl"
+        //                 />
+        //               </div>
+        //               <div class="flex-auto justify-evenly">
+        //                 <div class="flex flex-wrap ">
+        //                   <div class="w-full flex-none text-sm flex items-center text-gray-600">
+        //                     <svg
+        //                       xmlns="http://www.w3.org/2000/svg"
+        //                       class="h-4 w-4 text-red-500 mr-1"
+        //                       viewBox="0 0 20 20"
+        //                       fill="currentColor"
+        //                     >
+        //                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        //                     </svg>
+        //                     <span class="text-gray-400 whitespace-nowrap mr-3">
+        //                       4.60
+        //                     </span>
+        //                     <span class="mr-2 text-gray-400">India</span>
+        //                   </div>
+        //                   <div class="flex items-center w-full justify-between min-w-0 ">
+        //                     <h2 class="text-lg mr-auto cursor-pointer text-gray-900 hover:text-purple-500 truncate ">
+        //                       {product.productName}
+        //                     </h2>
+        //                     <div class="flex items-center bg-green-400 text-gray-900 text-xs px-2 py-1 ml-3 rounded-lg">
+        //                       {product.category}
+        //                     </div>
+        //                   </div>
+        //                 </div>
+        //                 <div class="text-xl text-gray-900 font-semibold mt-1">
+        //                   {product.price}
+        //                 </div>
+        //                 <div class="lg:flex  py-4  text-sm text-gray-600">
+        //                   <div class="flex-1 inline-flex items-center  mb-3">
+        //                     <div class="w-full flex-none text-sm flex items-center text-gray-600">
+        //                       <ul class="flex flex-row justify-center items-center space-x-2">
+        //                         <li class="">
+        //                           <span class="block p-1 border-2 border-gray-900 hover:border-blue-600 rounded-full transition ease-in duration-300">
+        //                             <a
+        //                               href="#blue"
+        //                               class="block w-3 h-3 bg-blue-600 rounded-full"
+        //                             ></a>
+        //                           </span>
+        //                         </li>
+        //                         <li class="">
+        //                           <span class="block p-1 border-2 border-gray-900 hover:border-yellow-400 rounded-full transition ease-in duration-300">
+        //                             <a
+        //                               href="#yellow"
+        //                               class="block w-3 h-3  bg-yellow-400 rounded-full"
+        //                             ></a>
+        //                           </span>
+        //                         </li>
+        //                         <li class="">
+        //                           <span class="block p-1 border-2 border-gray-900 hover:border-red-500 rounded-full transition ease-in duration-300">
+        //                             <a
+        //                               href="#red"
+        //                               class="block w-3 h-3  bg-red-500 rounded-full"
+        //                             ></a>
+        //                           </span>
+        //                         </li>
+        //                         <li class="">
+        //                           <span class="block p-1 border-2 border-gray-900 hover:border-green-500 rounded-full transition ease-in duration-300">
+        //                             <a
+        //                               href="#green"
+        //                               class="block w-3 h-3  bg-green-500 rounded-full"
+        //                             ></a>
+        //                           </span>
+        //                         </li>
+        //                       </ul>
+        //                     </div>
+        //                   </div>
+        //                   <div class="flex-1 inline-flex items-center mb-3">
+        //                     <span class="text-secondary whitespace-nowrap mr-3">
+        //                       Size
+        //                     </span>
+        //                     <div class="cursor-pointer text-gray-400 ">
+        //                       <span class="hover:text-purple-500 p-1 py-0">
+        //                         S
+        //                       </span>
+        //                       <span class="hover:text-purple-500 p-1 py-0">
+        //                         M
+        //                       </span>
+        //                       <span class="hover:text-purple-500 p-1 py-0">
+        //                         L
+        //                       </span>
+        //                       <span class="hover:text-purple-500 p-1 py-0">
+        //                         XL
+        //                       </span>
+        //                     </div>
+        //                   </div>
+        //                 </div>
+        //                 <div class="flex space-x-2 text-sm font-medium justify-start">
+        //                   <button
+        //                     onClick={() => handleAddtoCart(product)}
+        //                     class="transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-purple-500 px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-full hover:bg-purple-600 "
+        //                   >
+        //                     <span>Add Cart</span>
+        //                   </button>
+        //                   <button class="transition ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-gray-400 rounded-full w-9 h-9 text-center p-2">
+        //                     <svg
+        //                       xmlns="http://www.w3.org/2000/svg"
+        //                       class=""
+        //                       fill="none"
+        //                       viewBox="0 0 24 24"
+        //                       stroke="currentColor"
+        //                     >
+        //                       <path
+        //                         stroke-linecap="round"
+        //                         stroke-linejoin="round"
+        //                         stroke-width="2"
+        //                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+        //                       />
+        //                       <path
+        //                         stroke-linecap="round"
+        //                         stroke-linejoin="round"
+        //                         stroke-width="2"
+        //                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+        //                       />
+        //                     </svg>
+        //                   </button>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //           </div>
+        //         </div>
+        //       </div>
+        //     </div>
+        //   ))}
+        // </div>
+        <div className=" max-w-screen-2xl 2xl:mx-auto">
+          <div className=" py-6 lg:px-20 md:px-6 px-4">
+            <div className=" grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-y-12 lg:gap-x-8 sm:gap-y-10 sm:gap-x-6 gap-y-6 lg:mt-12 mt-10">
+              {products.map((product) => (
+                <div class="max-w-md mx-auto rounded-md overflow-hidden shadow-md hover:shadow-lg">
+                  <div class="relative">
+                    <img class="w-full" src={product.imageUrl} alt="" />
+                    <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">
+                      SALE
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h3 class="text-lg font-medium mb-2">
+                      {product.productName}
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4">{product.category}</p>
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-lg">Rs. {product.price}</span>
+                      <button
+                        onClick={() => handleAddtoCart(product)}
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                      >
+                        Add to cart
+                      </button>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
+              ;
             </div>
-          ))}
+
+            <div className=" flex justify-center items-center">
+              <button className=" hover:bg-gray-700 focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 bg-gray-800 py-5 md:px-16 md:w-auto w-full lg:mt-28 md:mt-12 mt-10 text-white font-medium text-base leading-4">
+                Load More
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
